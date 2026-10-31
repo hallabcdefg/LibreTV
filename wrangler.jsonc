@@ -9,9 +9,5 @@
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
-  },
-  "vars": {
-    "DEFAULT_SUBSCRIPTIONS": "https://raw.githubusercontent.com/hallabcdefg/LibreTV/main/meow-https.json",
-    "DEFAULT_IMAGE_MODE": "proxy"
   }
 }
