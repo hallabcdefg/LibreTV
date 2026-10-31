@@ -3,12 +3,18 @@
   "name": "libretv",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-10-01",
-  "compatibility_flags": [
-    "nodejs_compat"
-  ],
+  "compatibility_flags": ["nodejs_compat"],
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
-  "keep_vars": true
+
+  // ===== 环境变量（改这里 → 提交 → 自动部署生效） =====
+  // 与控制台「变量和密钥」里的配置保持一致，控制台只是同步展示，改请改这里
+  "vars": {
+    // 海报加载方式：proxy = 走 Workers 反代（豆瓣图带 Referer 伪装 + 长缓存）；direct = 直连
+    "DEFAULT_IMAGE_MODE": "proxy",
+    // 默认订阅线路：JSON 数组字符串，元素可写 {"url","name","refreshDays"}
+    "DEFAULT_SUBSCRIPTIONS": "[{\"url\": \"https://meow-c1t.pages.dev/lib001.json\", \"name\": \"线路1-主用\"}, {\"url\": \"https://meow-c1t.pages.dev/lib002.json\", \"name\": \"线路2-备用\"}, {\"url\": \"https://meow-c1t.pages.dev/lib003.json\", \"name\": \"线路3-备用\"}]"
+  }
 }
